@@ -8,8 +8,7 @@ http://www.ofx.org/downloads.html
 # History
 
 This is based on [node-ofx](https://github.com/chilts/node-ofx), modified to
-be a TypeScript implementation and to offer a promise-based API. Due to different goals and a different
-XML parser being used, it is not API-compatible and is probably slower.
+be a TypeScript implementation and to offer a promise-based API.
 
 # Usage
 
