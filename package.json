@@ -1,10 +1,10 @@
 {
-  "name": "@npkgdev/ofx-ts",
+  "name": "@npkgdev/ofx",
   "version": "1.0.0",
   "description": "Parse OFX files using TypeScript",
   "repository": {
     "type": "git",
-    "url": "https://github.com/npkgdev/ofx-ts"
+    "url": "https://github.com/npkgdev/ofx"
   },
   "main": "lib/index.js",
   "directories": {
@@ -21,7 +21,7 @@
     "banking",
     "export"
   ],
-  "bugs": "https://github.com/npkgdev/ofx-ts/issues",
+  "bugs": "https://github.com/npkgdev/ofx/issues",
   "scripts": {
     "build": "tsc",
     "clean-install": "rm -rf node_modules && npm install",
@@ -34,16 +34,14 @@
   "author": "Douglas de Paula Natalli",
   "license": "MIT",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/",
+    "access": "public"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
-    "reflect-metadata": "^0.1.13",
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
     "@types/jest": "^27.0.3",
-    "@types/lodash": "^4.14.178",
     "@types/node": "^16.11.12",
     "jest": "^27.4.5",
     "ts-jest": "^27.1.2",

@@ -1,5 +1,5 @@
 
-# OFX TS
+# OFX
 Parse Open Financial Exchange (OFX) files into a usable data structure.
 
 For details on the OFX file format, download the latest specification from

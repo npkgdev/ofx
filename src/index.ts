@@ -1,7 +1,7 @@
 import fs from "fs";
 const XmlParser = require("xml2js").Parser;
 
-interface OfxData {
+export interface OfxData {
   header?: any;
   info: {
     bankName         : string;
@@ -97,15 +97,9 @@ export async function parseString (data): Promise<OfxData> {
 
   const ofxData = dataParsed;
 
-  const {
-    LANGUAGE: language,
-    FI: {
-      ORG: bankName,
-      FID: bankId
-    }
-  } = ofxData.OFX.SIGNONMSGSRSV1.SONRS;
-  // const bankName             = ofxData.OFX.SIGNONMSGSRSV1.SONRS.FI.ORG;
-  // const bankId               = ofxData.OFX.SIGNONMSGSRSV1.SONRS.FI.FID;
+  const bankName             = ofxData.OFX.SIGNONMSGSRSV1?.SONRS?.FI?.ORG;
+  const bankId               = ofxData.OFX.SIGNONMSGSRSV1?.SONRS?.FI?.FID;
+  const language             = ofxData.OFX.SIGNONMSGSRSV1?.SONRS?.LANGUAGE;
   const statementResponse    = ofxData.OFX.BANKMSGSRSV1.STMTTRNRS.STMTRS;
   const accountId            = statementResponse.BANKACCTFROM.ACCTID;
   const currencyCode         = statementResponse.CURDEF;
