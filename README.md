@@ -5,14 +5,6 @@ Parse Open Financial Exchange (OFX) files into a usable data structure.
 For details on the OFX file format, download the latest specification from
 http://www.ofx.org/downloads.html
 
-# Goals
-
-* Work in the browser (no native code dependencies)
-* Have as small a footprint as possible (minimize dependencies)
-  - Currently, `xml2js` is the only dependency and it may be removed in the future.
-* Parse only, no serialization
-* Make no attempt to support pre-ES6 runtimes
-
 # History
 
 This is based on [node-ofx](https://github.com/chilts/node-ofx), modified to
@@ -26,8 +18,6 @@ Example usage:
 ```javascript
 import { parseFile as parseOFX } from "ofx";
 
-parseOFX("bank-statement.ofx").then(ofx => {
-  const { info, transactions } = ofx;
-  // do something...
-});
+const { info, transactions } = await parseOFX("bank-statement.ofx");
+// do something...
 ```
