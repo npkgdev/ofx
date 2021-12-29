@@ -1,0 +1,20 @@
+{
+    "defaultSeverity": "error",
+    "jsRules": {},
+    "rules": {
+      "variable-name": [
+        true,
+        "ban-keywords",
+        "check-format",
+        "allow-leading-underscore",
+        "allow-pascal-case"
+      ],
+      "space-before-function-paren": true,
+      "object-literal-sort-keys": false,
+      "max-classes-per-file": [true, 99],
+      "ban-types": [],
+      "ordered-imports": false,
+      "interface-name" : [true, "never-prefix"]
+    },
+    "rulesDirectory": []
+  }
